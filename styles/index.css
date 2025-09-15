@@ -1,0 +1,74 @@
+@import url("global.css");
+
+.image {
+  width: 80%;
+  border-radius: 8px;
+}
+
+.value-section {
+  list-style: none;
+  margin: 0px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.value-section li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.value-icon {
+  background-color: var(--color-white);
+  padding: 8px;
+  width: max-content;
+  border-radius: 8px;
+  display: flex;
+}
+
+.CTA-section {
+  background: var(--color-orange-100);
+  padding: 24px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .value-section-container {
+    gap: 16px;
+  }
+
+  .value-section {
+    flex-direction: row;
+    padding: 0px;
+    gap: 40px;
+  }
+
+  .CTA-section {
+    padding: 32px 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .value-section-container {
+    gap: 18px;
+  }
+
+  .value-section {
+    gap: 80px;
+  }
+
+  .value-section li {
+    gap: 16px;
+  }
+
+  .value-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .CTA-section {
+    padding: 60px 12px;
+  }
+}

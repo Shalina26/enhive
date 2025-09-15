@@ -1,0 +1,90 @@
+@import url("global.css");
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.activity-filter,
+.location-filter,
+.sort-button {
+  display: none;
+}
+
+.filter-button {
+  align-self: end;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  padding: 8px;
+  border-radius: 8px;
+  text-align: left;
+  gap: 4px;
+}
+
+.activity-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.activity-card h4 {
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.activity-card p {
+  color: var(--color-grey);
+}
+
+@media screen and (min-width: 768px) {
+  .filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .input-filters {
+    display: flex;
+    gap: 8px;
+  }
+
+  .activity-filter,
+  .location-filter,
+  .sort-button {
+    display: flex;
+  }
+
+  .filter-button {
+    display: none;
+  }
+
+  .activity-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .activity-list {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+}

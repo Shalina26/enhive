@@ -1,0 +1,44 @@
+@import url("global.css");
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 8px;
+}
+
+.image {
+  width: 80%;
+  border-radius: 8px;
+}
+
+.story-section > div,
+.mission-section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .story-section {
+    flex-direction: row;
+  }
+
+  .mission-section {
+    flex-direction: row-reverse;
+  }
+
+  .story-section > div,
+  .mission-section > div {
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  .image {
+    width: 45%;
+  }
+}

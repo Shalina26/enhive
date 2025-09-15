@@ -1,0 +1,313 @@
+:root {
+  --color-white: #fffdfb;
+  --color-light-grey: #e3e3e3;
+  --color-grey: #787878;
+  --color-black: #090202;
+  --color-orange-50: #fef5ee;
+  --color-orange-100: #fee8d6;
+  --color-orange-200: #fcceac;
+  --color-orange-300: #f9ab78;
+  --color-orange-700: #bd2f11;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Figtree", sans-serif;
+  color: var(--color-orange-700);
+  background-color: var(--color-orange-50);
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Baloo 2", sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.primary-button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: var(--color-orange-700);
+  color: var(--color-white);
+  font-size: 12px;
+}
+
+.secondary-button {
+  padding: 8px 12px;
+  border: 1px solid var(--color-orange-700);
+  border-radius: 8px;
+  color: var(--color-orange-700);
+  font-size: 12px;
+}
+
+.ghost-button {
+  padding: 8px 4px;
+  color: var(--color-orange-700);
+  font-size: 12px;
+}
+
+.dropdown-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--color-light-grey);
+  background-color: var(--color-white);
+  color: var(--color-orange-700);
+  font-size: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.input-field {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-light-grey);
+  background-color: var(--color-white);
+  color: var(--color-orange-700);
+  font-size: 12px;
+  align-items: center;
+  justify-content: left;
+}
+
+.box-shadow {
+  box-shadow: 0 0 2px 0 rgba(9, 2, 2, 0.25);
+}
+
+.active-page {
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-orange-100);
+}
+
+.logo {
+  height: 20px;
+}
+
+.nav-pages,
+.nav-buttons {
+  display: none;
+}
+
+.menu-button {
+  height: max-content;
+  padding: 4px;
+  display: flex;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-orange-700);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px;
+  border-top: 1px solid var(--color-orange-100);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .dropdown-button,
+  .ghost-button {
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 12px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section {
+    padding: 12px 40px;
+  }
+
+  .nav-pages,
+  .nav-buttons {
+    height: max-content;
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    gap: 8px;
+  }
+
+  .nav-pages {
+    justify-content: center;
+  }
+
+  .nav-buttons {
+    justify-content: right;
+  }
+
+  .nav-pages li,
+  .nav-buttons li {
+    display: flex;
+  }
+
+  .nav-pages a:hover {
+    text-decoration: underline;
+  }
+
+  .nav-pages a:active {
+    font-weight: 700;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .heading {
+    padding: 12px 0;
+  }
+
+  .heading p {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 12px 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 12px 80px;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .dropdown-button,
+  .input-field {
+    font-size: 16px;
+    padding: 12px 32px;
+  }
+
+  .ghost-button {
+    font-size: 16px;
+  }
+
+  .nav-pages {
+    gap: 20px;
+  }
+
+  section {
+    padding: 12px 80px;
+  }
+
+  .heading p {
+    font-size: 16px;
+  }
+
+  footer {
+    padding: 12px 80px;
+  }
+}
