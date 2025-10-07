@@ -1,0 +1,58 @@
+export const activities = [
+  {
+    id: "tennis-thunder-lanes",
+    name: "Tennis",
+    venue: "Thunder Lanes",
+    description: "This is a delicious cookie",
+    price: "20-30€",
+  },
+  {
+    id: "swimming-mystic-waters",
+    name: "Swimming",
+    venue: "Mystic Waters",
+    description: "This is a delicious cookie",
+    price: "5-10€",
+  },
+  {
+    id: "bungee-jumping-skyline-adventures",
+    name: "Bungee jumping",
+    venue: "Skyline Adventures",
+    description: "This is a delicious cookie",
+    price: "50-100€",
+  },
+  {
+    id: "bowling-cosmic-arcade",
+    name: "Bowling",
+    venue: "Cosmic Arcade",
+    description: "This is a delicious cookie",
+    price: "10-20€",
+  },
+  {
+    id: "hiking-emerald-hills",
+    name: "Hiking",
+    venue: "Emerald Hills",
+    description: "This is a delicious cookie",
+    price: "5-10€",
+  },
+  {
+    id: "karting-velocity-racing",
+    name: "Karting",
+    venue: "Velocity Racing",
+    description: "This is a delicious cookie",
+    price: "70-100€",
+  },
+  {
+    id: "pottery-painting-sunset-recreation",
+    name: "Pottery painting",
+    venue: "Sunset Recreation",
+    description: "This is a delicious cookie",
+    price: "20-30€",
+  },
+  {
+    id: "beach-volleyball-paradise-bay",
+    name: "Beach volleyball",
+    venue: "Paradise Bay",
+    description: "This is a delicious cookie",
+    price: "10-20€",
+  },
+];
