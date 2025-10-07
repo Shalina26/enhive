@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>enhive | login</title>
+    <link href="styles/login.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <a href="index.html"
+        ><img alt="logo" class="logo" src="images/enhive.svg"
+      /></a>
+      <form action="/login" method="post">
+        <div>
+          <h3>Log in</h3>
+          <p>Enter your username and password.</p>
+        </div>
+        <div class="form-element">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="input-field"
+          />
+        </div>
+        <div class="form-element">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="input-field"
+          />
+        </div>
+        <div class="button">
+          <button type="submit" class="primary-button">Log in</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
