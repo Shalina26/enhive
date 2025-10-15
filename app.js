@@ -35,13 +35,11 @@ app.get("/activities/:id", (request, response) => {
   const activity = activities.find((activity) => activity.id === activityId);
 
   if (!activity)
-    return response.send(
-      "Activity not found. Please check your spelling and try again."
-    );
+    return response
+      .status(404)
+      .send("Activity not found. Please check your spelling and try again.");
 
-  return response.send(
-    `${activity.name} at ${activity.venue}. ${activity.description}. Price: ${activity.price} per person.`
-  );
+  return response.status(200).render("activities/show", { activity: activity });
 });
 
 app.post("/login", (request, response) => {
