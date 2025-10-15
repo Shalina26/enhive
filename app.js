@@ -56,7 +56,7 @@ app.post("/login", (request, response) => {
 
   if (!user) return response.send("Username or password wrong.");
 
-  return response.redirect("/activities.html");
+  return response.redirect("activities");
 });
 
 app.listen(PORT, () => {
