@@ -14,6 +14,22 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", express.static("public"));
 
+app.get("/", (request, response) => {
+  response.render("index");
+});
+
+app.get("/activities", (request, response) => {
+  response.render("activities/index", { activities });
+});
+
+app.get("/about", (request, response) => {
+  response.render("about");
+});
+
+app.get("/login", (request, response) => {
+  response.render("auth/login");
+});
+
 app.get("/activities/:id", (request, response) => {
   const activityId = request.params.id;
   const activity = activities.find((activity) => activity.id === activityId);
