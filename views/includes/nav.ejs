@@ -1,0 +1,22 @@
+<nav>
+  <a href="/"><img alt="logo" class="logo" src="/images/enhive.svg" /></a>
+  <ul class="nav-pages">
+    <li><a class="ghost-button <% if (activePage === "home") { %> active-page <% } %>" href="/">Home</a></li>
+    <li>
+      <a class="ghost-button <% if (activePage === "activities") { %> active-page <% } %>" href="/activities">Activities</a>
+    </li>
+    <li><a class="ghost-button <% if (activePage === "about") { %> active-page <% } %>" href="/about">About</a></li>
+  </ul>
+  <ul class="nav-buttons">
+    <li><a class="secondary-button" href="/login">Log in</a></li>
+    <li><a class="primary-button" href="">Register</a></li>
+  </ul>
+
+  <button class="menu-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu menu-icon">
+      <path d="M4 5h16" />
+      <path d="M4 12h16" />
+      <path d="M4 19h16" />
+    </svg>
+  </button>
+</nav>
