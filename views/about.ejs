@@ -1,54 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>enhive | about</title>
-    <link href="styles/about.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <%- include("includes/head", {title: "enhive | about", styles:
+  "/styles/about.css"}) %>
   <body>
-    <nav>
-      <a href="index.html"
-        ><img alt="logo" class="logo" src="images/enhive.svg"
-      /></a>
-      <ul class="nav-pages">
-        <li><a class="ghost-button" href="index.html">Home</a></li>
-        <li><a class="ghost-button" href="activities.html">Activities</a></li>
-        <li><a class="ghost-button active-page" href="about.html">About</a></li>
-      </ul>
-      <ul class="nav-buttons">
-        <li><a class="secondary-button" href="login.html">Log in</a></li>
-        <li><a class="primary-button" href="">Register</a></li>
-      </ul>
-
-      <button class="menu-button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-menu-icon lucide-menu menu-icon"
-        >
-          <path d="M4 5h16" />
-          <path d="M4 12h16" />
-          <path d="M4 19h16" />
-        </svg>
-      </button>
-    </nav>
+    <%- include("includes/nav", {activePage: "about"}) %>
     <main>
       <section>
         <div class="heading">
@@ -89,7 +44,7 @@
             </p>
           </div>
         </div>
-        <img alt="enhive founders" src="images/founders.png" class="image" />
+        <img alt="enhive founders" src="/images/founders.png" class="image" />
       </section>
       <section class="mission-section">
         <div>
@@ -127,13 +82,11 @@
         </div>
         <img
           alt="enhive employees in a planning session"
-          src="images/mission.png"
+          src="/images/mission.png"
           class="image"
         />
       </section>
     </main>
-    <footer>
-      <p>@enhive</p>
-    </footer>
+    <%- include("includes/footer") %>
   </body>
 </html>
