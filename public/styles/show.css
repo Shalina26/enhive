@@ -1,0 +1,39 @@
+@import url("global.css");
+
+h3 {
+  font-weight: 500;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 12px;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    gap: 8px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heading {
+    gap: 12px;
+  }
+}

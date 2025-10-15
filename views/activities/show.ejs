@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<%- include("../includes/head", {title: "enhive | activities", styles: "/styles/show.css"}) %>
+
+<body>
+  <%- include("../includes/nav", {activePage: "activities"}) %>
+  <main>
+    <section>
+      <img class="image" alt="activity picture" src="/images/<%= activity.image %>" />
+      <div class="activity-info">
+        <div class="heading">
+          <h2><%= activity.name %></h2>
+          <h3><%= activity.venue %></h3>
+        </div>
+        <p><%= activity.description %></p>
+        <p><b>Price: </b><%= activity.price %></p>
+      </div>
+    </section>
+  </main>
+  <%- include("../includes/footer") %>
+</body>
+
+</html>
