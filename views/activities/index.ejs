@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<%- include("../includes/head", {title: "enhive | activities", styles:
+  "/styles/activities.css"}) %>
+
+<body>
+  <%- include("../includes/nav", {activePage: "activities"}) %>
+  <main>
+    <section>
+      <div class="heading">
+        <h1>Explore fun and fullfilling activities</h1>
+        <p>
+          Discover a variety of activities to do in your leisure time. Use the
+          filters to find an activity by type or location, or simply scroll
+          the list and let something amazing catch your eye.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="filters">
+        <div class="input-filters">
+          <input name="activity-search" class="activity-filter input-field" placeholder="Search activities" />
+          <input name="location-search" class="location-filter input-field" placeholder="Add location" />
+        </div>
+        <button class="sort-button dropdown-button">
+          Filter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <button class="filter-button dropdown-button">
+          Filter<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+      </div>
+      <ul class="activity-list">
+        <% activities.forEach(activity => { %>
+        <% const activityId = activity.id; %>
+        <% const activityName = activity.name; %>
+        <% const activityVenue = activity.venue; %>
+        <% const activityPrice = activity.price; %>
+        <% const activityImage = activity.image; %>
+        <%- include("../includes/activity-card", {name: activityName, venue: activityVenue, price: activityPrice, slug: activityId, image: activityImage}) %>
+        <% }); %>
+      </ul>
+    </section>
+  </main>
+  <%- include("../includes/footer") %>
+</body>
+
+</html>
