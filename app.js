@@ -6,6 +6,9 @@ import { users } from "./data/users.js";
 const app = express();
 const PORT = 3000;
 
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
 app.use(logger);
 app.use(express.urlencoded({ extended: true }));
 
