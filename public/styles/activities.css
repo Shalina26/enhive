@@ -51,6 +51,7 @@
 
 .activity-card p {
   color: var(--color-grey);
+  font-size: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -86,5 +87,9 @@
   .activity-list {
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
+  }
+
+  .activity-card p {
+    font-size: 14px;
   }
 }

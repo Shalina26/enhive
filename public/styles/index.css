@@ -31,7 +31,8 @@
 
 .CTA-section {
   background: var(--color-orange-100);
-  padding: 24px 12px;
+  padding: 24px 0px;
+  border-radius: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -46,7 +47,7 @@
   }
 
   .CTA-section {
-    padding: 32px 12px;
+    padding: 32px 0px;
   }
 }
 
@@ -69,6 +70,6 @@
   }
 
   .CTA-section {
-    padding: 60px 12px;
+    padding: 60px 0px;
   }
 }

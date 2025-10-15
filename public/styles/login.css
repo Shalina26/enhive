@@ -34,6 +34,10 @@ input {
     width: 300px;
   }
 
+  .logo {
+    height: 24px;
+  }
+
   .input-field {
     padding: 8px 8px;
   }
@@ -46,5 +50,9 @@ input {
 
   input {
     width: 360px;
+  }
+
+  .logo {
+    height: 28px;
   }
 }
