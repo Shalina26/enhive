@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<%- include("includes/head", {title: "enhive | home", styles:
+  "/styles/index.css"}) %>
+
+<body>
+  <%- include("includes/nav", {activePage: "home"}) %>
+  <main>
+    <section>
+      <div class="heading">
+        <h1>Fun activities, all in one place</h1>
+        <p>Discover a variety of activities conveniently</p>
+      </div>
+      <a class="primary-button" href="activities">Start exploring</a>
+      <img alt="woman doing a stretch" class="image" src="/images/stretch.png" />
+    </section>
+    <section class="value-section-container">
+      <h2>What you'll get</h2>
+      <ul class="value-section">
+        <li>
+          <div class="value-icon box-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-library-icon lucide-library">
+              <path d="m16 6 4 14" />
+              <path d="M12 6v14" />
+              <path d="M8 8v12" />
+              <path d="M4 4v16" />
+            </svg>
+          </div>
+          <h3>Variety of activities</h3>
+          <p>
+            Our website offers a wide range of activities: Sports, Creativity
+            or Leisure and Fun.
+          </p>
+        </li>
+        <li>
+          <div class="value-icon box-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-search-icon lucide-text-search">
+              <path d="M21 5H3" />
+              <path d="M10 12H3" />
+              <path d="M10 19H3" />
+              <circle cx="17" cy="15" r="3" />
+              <path d="m21 19-1.9-1.9" />
+            </svg>
+          </div>
+          <h3>Search in seconds</h3>
+          <p>
+            Filter by activity type or location and jump straight to the
+            activities you seek.
+          </p>
+        </li>
+        <li>
+          <div class="value-icon box-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check-icon lucide-calendar-check">
+              <path d="M8 2v4" />
+              <path d="M16 2v4" />
+              <rect width="18" height="18" x="3" y="4" rx="2" />
+              <path d="M3 10h18" />
+              <path d="m9 16 2 2 4-4" />
+            </svg>
+          </div>
+          <h3>Easy booking process</h3>
+          <p>
+            Our booking process is designed to make booking an appointment
+            super easy.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="CTA-section">
+      <h2>Ready to find your passion?</h2>
+      <p>Hit the button, pick an activity, and start an active lifestyle.</p>
+      <a class="primary-button" href="activities">Start exploring</a>
+    </section>
+  </main>
+  <%- include("includes/footer") %>
+</body>
+
+</html>
