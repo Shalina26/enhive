@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<%- include("../includes/head", {title: "enhive | new activity", styles:
+  "/styles/form.css"}) %>
+
+<body>
+  <main>
+    <a href="/"><img alt="logo" class="logo" src="/images/enhive.svg" /></a>
+    <form action="/activities/new" method="post">
+      <div>
+        <h3>Add an activity</h3>
+      </div>
+      <div class="form-element">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="input-field" />
+      </div>
+      <div class="form-element">
+        <label for="venue">Venue:</label>
+        <input type="text" id="venue" name="venue" class="input-field" />
+      </div>
+      <div class="form-element">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" class="input-field" />
+      </div>
+      <div class="form-element">
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" class="input-field" />
+      </div>
+      <div class="button">
+        <button type="submit" class="primary-button">Create activity</button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
