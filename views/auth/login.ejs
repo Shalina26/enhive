@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <%- include("../includes/head", {title: "enhive | login", styles:
-  "/styles/login.css"}) %>
-  <body>
-    <main>
-      <a href="/"><img alt="logo" class="logo" src="/images/enhive.svg" /></a>
-      <form action="/login" method="post">
-        <div>
-          <h3>Log in</h3>
-          <p>Enter your username and password.</p>
-        </div>
-        <div class="form-element">
-          <label for="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            class="input-field"
-          />
-        </div>
-        <div class="form-element">
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="input-field"
-          />
-        </div>
-        <div class="button">
-          <button type="submit" class="primary-button">Log in</button>
-        </div>
-      </form>
-    </main>
-  </body>
+<%- include("../includes/head", {title: "enhive | login", styles:
+  "/styles/form.css"}) %>
+
+<body>
+  <main>
+    <a href="/"><img alt="logo" class="logo" src="/images/enhive.svg" /></a>
+    <form>
+      <div>
+        <h3>Log in</h3>
+        <p>Enter your username and password.</p>
+      </div>
+      <div class="form-element">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="input-field" />
+      </div>
+      <div class="form-element">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="input-field" />
+      </div>
+      <div class="button">
+        <button type="submit" class="primary-button">Log in</button>
+      </div>
+    </form>
+  </main>
+</body>
+
 </html>
