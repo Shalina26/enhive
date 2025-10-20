@@ -314,7 +314,8 @@ footer {
     padding: 12px 32px;
   }
 
-  .ghost-button .input-field {
+  .ghost-button,
+  .input-field {
     font-size: 16px;
   }
 
