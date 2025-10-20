@@ -1,0 +1,12 @@
+@import url("global.css");
+
+body {
+  text-align: center;
+  height: 100dvh;
+}
+
+main {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
