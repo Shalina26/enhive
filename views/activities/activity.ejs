@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<%- include("../includes/head", {title: "enhive | activities", styles: "/styles/activity.css"}) %>
+
+<body>
+  <%- include("../includes/nav", {activePage: "activities"}) %>
+  <main>
+    <section class="activity-images">
+      <img class="image" alt="activity picture" src="/images/hiking.png" />
+      <div>
+        <img class="image" alt="activity picture" src="/images/bungee.png" />
+        <img class="image" alt="activity picture" src="/images/pottery.png" />
+        <img class="image" alt="activity picture" src="/images/volleyball.png" />
+        <img class="image" alt="activity picture" src="/images/bowling.png" />
+      </div>
+    </section>
+    <section>
+      <div class=" activity-info">
+        <div class="top-row">
+          <div class="heading">
+            <h2><%= activity.name %></h2>
+            <h3><%= activity.venue %></h3>
+          </div>
+          <div class="owner-actions">
+            <a class="ghost-button" href="/activities/<%= activity.slug %>/edit"> Edit</a>
+            <a class="ghost-button" href="/activities/<%= activity.slug %>/delete"> Delete</a>
+          </div>
+        </div>
+        <p><%= activity.description %></p>
+        <p><b>Price: </b><%= activity.price %> €</p>
+      </div>
+    </section>
+
+  </main>
+  <%- include("../includes/footer") %>
+</body>
+
+</html>

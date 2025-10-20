@@ -1,0 +1,71 @@
+@import url("global.css");
+
+h3 {
+  font-weight: 500;
+}
+
+.activity-images > div {
+  display: none;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 12px;
+  width: 100%;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.owner-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.owner-actions > .ghost-button {
+  color: var(--color-grey);
+  text-decoration: underline;
+}
+
+.owner-actions > a {
+  height: max-content;
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    gap: 8px;
+  }
+
+  .activity-images,
+  .activity-images > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .heading {
+    gap: 12px;
+  }
+}
