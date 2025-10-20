@@ -35,12 +35,7 @@
       </div>
       <ul class="activity-list">
         <% activities.forEach(activity => { %>
-        <% const activityId = activity.id; %>
-        <% const activityName = activity.name; %>
-        <% const activityVenue = activity.venue; %>
-        <% const activityPrice = activity.price; %>
-        <% const activityImage = activity.image; %>
-        <%- include("../includes/activity-card", {name: activityName, venue: activityVenue, price: activityPrice, slug: activityId, image: activityImage}) %>
+        <%- include("../includes/activity-card", {activity}) %>
         <% }); %>
       </ul>
     </section>
