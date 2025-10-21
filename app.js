@@ -24,7 +24,7 @@ app.get("/about", (request, response) => {
 });
 
 app.use(authRouter);
-app.use(activitiesRouter);
+app.use("/activities", activitiesRouter);
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/enhive")

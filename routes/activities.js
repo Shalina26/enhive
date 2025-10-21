@@ -11,10 +11,10 @@ import {
 
 export const activitiesRouter = express.Router();
 
-activitiesRouter.get("/activities", renderAllActivitiesPage);
-activitiesRouter.get("/activities/new", renderAddNewActivityPage);
-activitiesRouter.post("/activities/new", createNewActivity);
-activitiesRouter.get("/activities/:slug", renderActivityPage);
-activitiesRouter.post("/activities/:slug", updateActivity);
-activitiesRouter.get("/activities/:slug/edit", renderEditActivityPage);
-activitiesRouter.get("/activities/:slug/delete", deleteActivity);
+activitiesRouter.get("/", renderAllActivitiesPage);
+activitiesRouter.get("/new", renderAddNewActivityPage);
+activitiesRouter.post("/new", createNewActivity);
+activitiesRouter.get("/:slug", renderActivityPage);
+activitiesRouter.post("/:slug", updateActivity);
+activitiesRouter.get("/:slug/edit", renderEditActivityPage);
+activitiesRouter.get("/:slug/delete", deleteActivity);
