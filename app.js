@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { logger } from "./middlewares/logger.js";
 import { authRouter } from "./routes/auth.js";
 import { activitiesRouter } from "./routes/activities.js";
+import { simplePagesRouter } from "./routes/simple-pages.js";
 
 const app = express();
 const PORT = 3000;
@@ -15,16 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", express.static("public"));
 
-app.get("/", (request, response) => {
-  response.render("index");
-});
-
-app.get("/about", (request, response) => {
-  response.render("about");
-});
-
-app.use(authRouter);
+app.use(simplePagesRouter);
 app.use("/activities", activitiesRouter);
+app.use(authRouter);
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/enhive")
