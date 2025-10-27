@@ -14,3 +14,14 @@ export const createSlug = (name, venue) => {
 
   return slug.toLowerCase();
 };
+
+export const validateNameAndVenue = (name, venue) => {
+  const regex = /^[A-Za-z0-9\- ]+$/;
+  const validName = regex.test(name);
+  const validVenue = regex.test(venue);
+
+  if (validName && validVenue) {
+    return true;
+  }
+  return false;
+};

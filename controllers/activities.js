@@ -3,6 +3,7 @@ import {
   createPriceInEuro,
   createPriceInCents,
   createSlug,
+  validateNameAndVenue,
 } from "../helpers/activity-views.js";
 import { CustomError } from "../helpers/custom-error.js";
 
@@ -20,12 +21,24 @@ export const renderAllActivitiesPage = async (request, response) => {
 };
 
 export const renderAddNewActivityPage = (request, response) => {
-  response.render("activities/new");
+  response.render("activities/new", { formData: null, message: null });
 };
 
 export const createNewActivity = async (request, response) => {
   try {
     const formData = request.body;
+    const validNameAndVenue = validateNameAndVenue(
+      formData.name,
+      formData.venue
+    );
+
+    if (!validNameAndVenue)
+      return response.render("activities/new", {
+        formData,
+        message:
+          "Please check your spelling and avoid using special characters.",
+      });
+
     const slug = createSlug(formData.name, formData.venue);
     const priceInCents = createPriceInCents(formData.price);
 
@@ -81,6 +94,19 @@ export const updateActivity = async (request, response) => {
   try {
     const oldSlug = request.params.slug;
     const formData = request.body;
+
+    const validNameAndVenue = validateNameAndVenue(
+      formData.name,
+      formData.venue
+    );
+
+    if (!validNameAndVenue)
+      return response.render("activities/edit", {
+        activity: { ...formData, slug: oldSlug },
+        message:
+          "Please check your spelling and avoid using special characters.",
+      });
+
     const newSlug = createSlug(formData.name, formData.venue);
     const priceInCents = createPriceInCents(formData.price);
 
@@ -124,6 +150,7 @@ export const renderEditActivityPage = async (request, response) => {
 
     response.status(200).render("activities/edit", {
       activity: { ...activity.toJSON(), price },
+      message: null,
     });
   } catch (error) {
     console.error(error);
