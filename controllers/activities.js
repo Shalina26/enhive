@@ -102,7 +102,7 @@ export const updateActivity = async (request, response) => {
 
     if (!validNameAndVenue)
       return response.render("activities/edit", {
-        activity: { ...formData, slug: oldSlug },
+        formData: { ...formData, slug: oldSlug },
         message:
           "Please check your spelling and avoid using special characters.",
       });
@@ -149,7 +149,7 @@ export const renderEditActivityPage = async (request, response) => {
     const price = createPriceInEuro(activity.price);
 
     response.status(200).render("activities/edit", {
-      activity: { ...activity.toJSON(), price },
+      formData: { ...activity.toJSON(), price },
       message: null,
     });
   } catch (error) {
