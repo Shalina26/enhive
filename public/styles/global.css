@@ -131,7 +131,12 @@ section {
   justify-content: left;
 }
 
-input:focus {
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
   outline-style: solid;
   outline-color: var(--color-orange-700);
 }
