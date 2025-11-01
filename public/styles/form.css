@@ -21,16 +21,21 @@ form {
   gap: 12px;
 }
 
-input,
-textarea {
-  width: 240px;
+.error-messages {
+  margin: 0;
+  padding-left: 12px;
 }
 
-.error-message p {
-  font-size: 10px;
+.error-messages li {
+  font-size: 8px;
   color: var(--color-black);
-  width: 240px;
   text-align: left;
+  list-style-position: outside;
+}
+
+.input-field,
+.error-messages {
+  width: 240px;
 }
 
 @media screen and (min-width: 768px) {
@@ -38,22 +43,21 @@ textarea {
     gap: 20px;
   }
 
-  input,
-  textarea {
-    width: 300px;
-  }
-
   .logo {
     height: 24px;
   }
 
-  .error-message p {
-    font-size: 12px;
-    width: 300px;
+  .error-messages li {
+    font-size: 10px;
   }
 
   .input-field {
     padding: 8px 8px;
+  }
+
+  .input-field,
+  .error-messages {
+    width: 300px;
   }
 }
 
@@ -62,17 +66,16 @@ textarea {
     gap: 28px;
   }
 
-  input,
-  textarea {
-    width: 360px;
-  }
-
   .logo {
     height: 28px;
   }
 
-  .error-message p {
-    font-size: 14px;
+  .error-messages li {
+    font-size: 12px;
+  }
+
+  .input-field,
+  .error-messages {
     width: 360px;
   }
 }

@@ -135,8 +135,7 @@ textarea {
   resize: none;
 }
 
-input:focus,
-textarea:focus {
+.input-field:focus {
   outline-style: solid;
   outline-color: var(--color-orange-700);
 }

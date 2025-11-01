@@ -2,15 +2,19 @@
   <div>
     <h3><%= header %></h3>
   </div>
-  <div class="error-message">
-    <p><%= message ? message : '' %></p>
-  </div>
+  <% if (errorMessages) { %>
+  <ul class="error-messages">
+    <% errorMessages.forEach(message => { %>
+    <li><%= message %></li>
+    <% }); %>
+  </ul>
+  <% } %>
   <div class="form-element">
-    <label for="name">Name:</label>
+    <label for="name">Activity name:</label>
     <input type="text" id="name" name="name" class="input-field" value="<%= formData ? formData.name : '' %>" />
   </div>
   <div class="form-element">
-    <label for="venue">Venue:</label>
+    <label for="venue">Venue name:</label>
     <input type="text" id="venue" name="venue" class="input-field" value="<%= formData ? formData.venue : '' %>" />
   </div>
   <div class="form-element">
@@ -18,7 +22,7 @@
     <textarea type="text" id="description" name="description" class="input-field" rows="3"><%= formData ? formData.description : '' %></textarea>
   </div>
   <div class="form-element">
-    <label for="price">Price:</label>
+    <label for="price">Price (in €):</label>
     <input type="text" id="price" name="price" class="input-field" value="<%= formData ? formData.price : '' %>" />
   </div>
   <div class="button">
