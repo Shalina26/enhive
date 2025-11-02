@@ -4,7 +4,7 @@ enhive is a platform for discovering and booking activities. This is the first v
 
 ### Prerequisites
 
-- The following things need to be installed before runing the project:
+- The following things need to be installed before running the project:
 
   - [nodejs](https://nodejs.org/en/) (v22.19.0)
   - [mongodb](https://www.mongodb.com/try/download/community) (local instance)

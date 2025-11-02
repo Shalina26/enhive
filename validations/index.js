@@ -88,7 +88,7 @@ export const priceValidationChain = body("price")
   .bail()
 
   .isFloat()
-  .withMessage("Price must be a number")
+  .withMessage("Price must be a number.")
   .bail()
 
   .isFloat({ min: 0 })
