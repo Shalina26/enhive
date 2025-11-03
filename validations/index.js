@@ -101,7 +101,7 @@ export const priceValidationChain = body("price")
 
   .isFloat({ max: 1000 })
   .withMessage("Price cannot be greater than 1000.00€.")
+  .bail()
 
   .matches(/^\d+(\.\d{1,2})?$/)
-  .withMessage("Price can have up to two decimal places.")
-  .bail();
+  .withMessage("Price can have up to two decimal places.");
