@@ -96,7 +96,6 @@ export const updateActivity = async (request, response) => {
 
     if (!validationResult.isEmpty()) {
       const errors = validationResult.array();
-      console.log(errors);
       const errorMessages = errors.map((error) => error.msg);
 
       return response.render("activities/edit", {
