@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<%- include("../includes/head", {title: "enhive | activities", styles:
+<%- include("../partials/head", {title: "enhive | activities", styles:
   "/styles/activities.css"}) %>
 
 <body>
-  <%- include("../includes/nav", {activePage: "activities"}) %>
+  <%- include("../partials/nav", {activePage: "activities"}) %>
   <main>
     <section>
       <div class="heading">
@@ -35,13 +35,13 @@
       </div>
       <ul class="activity-list">
         <% activities.forEach(activity => { %>
-        <%- include("../includes/activity-card", {activity}) %>
+        <%- include("../partials/activity-card", {activity}) %>
         <% }); %>
       </ul>
     </section>
     <a class="primary-button" href="/activities/new"> Add activity</a>
   </main>
-  <%- include("../includes/footer") %>
+  <%- include("../partials/footer") %>
 </body>
 
 </html>

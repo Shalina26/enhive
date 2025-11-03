@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <%- include("includes/head", {title: "enhive | about", styles:
+<%- include("partials/head", {title: "enhive | about", styles:
   "/styles/about.css"}) %>
+
   <body>
-    <%- include("includes/nav", {activePage: "about"}) %>
+  <%- include("partials/nav", {activePage: "about"}) %>
     <main>
       <section>
         <div class="heading">
@@ -87,6 +88,7 @@
         />
       </section>
     </main>
-    <%- include("includes/footer") %>
+  <%- include("partials/footer") %>
   </body>
+
 </html>

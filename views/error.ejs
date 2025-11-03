@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<%- include("includes/head", {title: "enhive | error", styles:
+<%- include("partials/head", {title: "enhive | error", styles:
   "/styles/error.css"}) %>
 
 <body>
-  <%- include("includes/nav", {activePage: ""}) %>
+  <%- include("partials/nav", {activePage: ""}) %>
   <main>
     <section>
       <h1>Oops.</h1>
       <p><%= message %></p>
     </section>
   </main>
-  <%- include("includes/footer") %>
+  <%- include("partials/footer") %>
 </body>
 
 </html>
