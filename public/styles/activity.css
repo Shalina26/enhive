@@ -4,7 +4,7 @@ h3 {
   font-weight: 500;
 }
 
-.activity-images > div {
+.activity-images div {
   display: none;
 }
 
@@ -42,12 +42,9 @@ h3 {
   gap: 8px;
 }
 
-.owner-actions > .ghost-button {
+.owner-actions .ghost-button {
   color: var(--color-grey);
   text-decoration: underline;
-}
-
-.owner-actions > a {
   height: max-content;
 }
 
@@ -57,7 +54,7 @@ h3 {
   }
 
   .activity-images,
-  .activity-images > div {
+  .activity-images div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
