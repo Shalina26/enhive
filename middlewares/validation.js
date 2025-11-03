@@ -3,7 +3,6 @@ export const validateInput = (validationChains) => {
     for (const chain of validationChains) {
       await chain.run(response);
     }
-
     next();
   };
 };
