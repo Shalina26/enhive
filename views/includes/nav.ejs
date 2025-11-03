@@ -1,6 +1,6 @@
 <nav>
   <a href="/"><img alt="logo" class="logo" src="/images/enhive.svg" /></a>
-  <ul class="nav-pages">
+  <ul class="nav-pages" id="nav-pages">
     <li><a class="ghost-button <% if (activePage === "home") { %> active-page <% } %>" href="/">Home</a></li>
     <li>
       <a class="ghost-button <% if (activePage === "activities") { %> active-page <% } %>" href="/activities">Activities</a>
@@ -12,11 +12,32 @@
     <li><a class="primary-button" href="/register">Register</a></li>
   </ul>
 
-  <button class="menu-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu menu-icon">
+  <div class="mobile-nav-menu" id="mobile-nav-menu">
+    <ul class="mobile-nav-pages">
+      <li><a class="ghost-button <% if (activePage === "home") { %> active-page <% } %>" href="/">Home</a></li>
+      <li>
+        <a class="ghost-button <% if (activePage === "activities") { %> active-page <% } %>" href="/activities">Activities</a>
+      </li>
+      <li><a class="ghost-button <% if (activePage === "about") { %> active-page <% } %>" href="/about">About</a></li>
+    </ul>
+    <ul class="mobile-nav-buttons">
+      <li><a class="secondary-button" href="/login">Log in</a></li>
+      <li><a class="primary-button" href="/register">Register</a></li>
+    </ul>
+  </div>
+
+  <button class="mobile-open-menu-button" id="mobile-open-menu-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu mobile-menu-icon">
       <path d="M4 5h16" />
       <path d="M4 12h16" />
       <path d="M4 19h16" />
+    </svg>
+  </button>
+
+  <button class="mobile-close-menu-button" id="mobile-close-menu-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x mobile-menu-icon">
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
     </svg>
   </button>
 </nav>
