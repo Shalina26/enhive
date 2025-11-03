@@ -11,17 +11,24 @@ export const renderAllActivitiesPage = async (request, response) => {
   try {
     const activities = await Activity.find({}).exec();
 
-    response.render("activities/index", { activities, createPriceInEuro });
+    return response.render("activities/index", {
+      activities,
+      createPriceInEuro,
+    });
   } catch (error) {
     console.error(error);
-    response.render("error", {
+
+    return response.render("error", {
       message: "Something went wrong while loading the activities.",
     });
   }
 };
 
 export const renderAddNewActivityPage = (request, response) => {
-  response.render("activities/new", { formData: null, errorMessages: null });
+  return response.render("activities/new", {
+    formData: null,
+    errorMessages: null,
+  });
 };
 
 export const createNewActivity = async (request, response) => {
@@ -51,7 +58,7 @@ export const createNewActivity = async (request, response) => {
 
     if (!activity) throw new CustomError("Could not create the activity.");
 
-    response.redirect("/activities");
+    return response.redirect("/activities");
   } catch (error) {
     console.error(error);
 
@@ -73,7 +80,7 @@ export const renderActivityPage = async (request, response) => {
 
     const price = createPriceInEuro(activity.price);
 
-    response.status(200).render("activities/activity", {
+    return response.render("activities/activity", {
       activity: { ...activity.toJSON(), price },
     });
   } catch (error) {
@@ -123,7 +130,7 @@ export const updateActivity = async (request, response) => {
 
     if (!activity) throw new CustomError("Could not find the activity.");
 
-    response.redirect(`${activity.slug}`);
+    return response.redirect(`${activity.slug}`);
   } catch (error) {
     console.error(error);
 
@@ -145,7 +152,7 @@ export const renderEditActivityPage = async (request, response) => {
 
     const price = createPriceInEuro(activity.price);
 
-    response.status(200).render("activities/edit", {
+    return response.render("activities/edit", {
       formData: { ...activity.toJSON(), price },
       errorMessages: null,
     });
@@ -168,7 +175,7 @@ export const deleteActivity = async (request, response) => {
 
     if (!deletedActivity) throw new CustomError("Could not find the activity.");
 
-    response.redirect("/activities");
+    return response.redirect("/activities");
   } catch (error) {
     console.error(error);
 
